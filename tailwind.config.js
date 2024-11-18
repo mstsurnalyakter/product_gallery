@@ -18,7 +18,7 @@ export default withMT({
   daisyui: {
     themes: [
       {
-        agriMarket: {
+        productGallery: {
           ...require("daisyui/src/theming/themes")["light"],
           primary: "#28a745",
           secondary: "#004085",
