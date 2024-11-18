@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+export default withMT({
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,5 +14,24 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-};
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        agriMarket: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#28a745",
+          secondary: "#004085",
+          ".btn-primary": {
+            color: "#fff",
+          },
+          ".btn-outline.btn-primary:hover": {
+            color: "#fff",
+          },
+        },
+      },
+      "dark",
+      "cupcake",
+    ],
+  },
+});
