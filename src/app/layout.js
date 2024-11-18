@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           <main className="min-h-[calc(100vh-368px)] mx-auto max-w-7xl font-poppins px-2 space-y-11">
             {children}
           </main>
+          <Footer/>
         </div>
       </body>
     </html>
